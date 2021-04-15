@@ -10,4 +10,9 @@ public class App
     {
         System.out.println( "Hello World!" );
     }
+    
+    @Version(major=1, minor=1)
+    public void testMethod() {
+    	
+    }
 }

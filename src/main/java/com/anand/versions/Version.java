@@ -1,4 +1,4 @@
-package com.anand;
+package com.anand.versions;
 
 public @interface Version {
 	int major();

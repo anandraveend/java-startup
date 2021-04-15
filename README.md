@@ -1,16 +1,17 @@
-# Java 8 Reflections
+# Java 8 Generics
 
-### To create a new branch  using git
- `git checkout -b <branch-name>`
+### Used to help with polymorphism.
 
-### Definition
-Reflection is the ability of a program to query and modify its state “as data” during the execution of the program. The ability of a program to query or obtain information about itself is known as **introspection**.
-The ability of a program to modify its execution state, modify its own interpretation or its meaning, or add new behaviors to the program as it is executing is called **intercession**.
-	
-### Class reflection can be done using-
-1. using a class Literal
-2. using the getClass() method of the Object class
-3. using the forName() static method of Class class
+### The non-generic version of a generic type is called a raw type. Using raw types is discouraged.
 
-### Deep reflection
-Java has been allowing access to rather inaccessible members such as a private field of a class outside the class using reflection. This is called deep reflection
+### Unbounded wild cards
+use of ? when the type is unclear
+
+### Upper bounded wild cards
+? extends <Parent> where ? can only be subtypes
+
+### Lower bounded wild cards 
+Use this to enforce type can only be a super of the given type
+
+### Reification
+Representing a type at runtime is called reification. A type that can be represented at runtime is called a reifiable type. A type that is not completely represented at runtime is called a non-reifiable type. 

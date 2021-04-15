@@ -45,7 +45,17 @@ public class App {
 		while(ita.hasNext()) {
 			System.out.println(ita.next());
 		}
-	}
-	
+		
+		//Instantiating nested inner classes
+		InnerOuter out = new InnerOuter();
+		InnerOuter.Inner in =  out.new Inner();
+		in.sayHello();
+		
+		//Closure demo using inner classes
+		CallbackTest cbt = new CallbackTest();
+		cbt.testCallable();
+		cbt.callBack();
+				
+	}	
 
 }

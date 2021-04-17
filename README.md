@@ -1,24 +1,34 @@
-# Java 8 -Lambdas
+# Java 8 -Threads
 
-**A lambda expression is an unnamed block of code (or an unnamed function) with a list of formal parameters
-and a body**
+## Some definitions
+- A program is an algorithm expressed in a programming language. 
+- A process is a running instance of a program with all system resources allocated by the operating system to that instance of the program.
+Typically, a process consists of a unique identifier, a program counter, executable code, an address space,open handles to system resources, a security context, and many other things. 
+- A program counter, also called an instruction pointer, is a value maintained in the CPU register that keeps track of the instruction being executed by the CPU.
+- Multitasking is the ability of an operating system to execute multiple tasks (or processes) at once. 
+- The switching of the CPU among processes is called a context switch. In a context switch, the running process is stopped, its state is saved, the state of the process that is going to get the CPU is restored, and the new process is run.
 
-### FunctionalInterface annotation to define a lambda expression interface
-A functional interface is simply an interface that has exactly one abstract method
-Other than the abstract method, they can have the below -
-- Default methods
-- Static methods
-- Public methods inherited from Object class
+### Ways of creating threads
+1. Inheriting the Thread class
+2. Implementing the Runnable interface
+3. Using a method reference in Thread class - method reference of a method (static or instance) that takes no parameters and returns void as the code to be executed by a thread.
 
-### Use compose and andThen to chain functional interfaces
-- The andThen() method returns a composed Function that applies this function to the argument, and then applies the specified after function to the result. 
-- The compose() function returns a composed function that applies the specified before function to the argument, and then applies this function to the result. 
-- The identify() method returns a function that always returns its argument.
+### You can handle an uncaught exception thrown in your thread - implements Thread.UncaughtExceptionHandler
 
-### Predicate interface
-A predicate represents a condition that is either true or false for a given input.
+### Common Thread methods
+- wait - wait until notified
+- notify - notify a waiting thread
+- park /unpark 
+- join - used to serialize execution
+- getCurrentThread - who is currently running
 
+### Daemon Threads
+A daemon thread is a kind of a service provider thread, whereas a user thread (or non-daemon thread) is a thread that uses the services of daemon threads. 
 
-### Lexical scoping
-Even though a lambda expression looks like a method declaration, it does not define a scope of its own.
-It exists in its enclosing scope. This is known as lexical scoping for lambda expressions.
+### Thread interrupt() vs isInterrupted()
+First one clears the interrupted state, while the other just queries it
+
+### Volatile variables
+For every write request for a volatile variable, a thread writes the value to the main memory. In other words, a thread does not cache the value of a volatile variable in its working memory. 
+You can declare only a class member variable (instance or static fields) as volatile.
+You cannot declare a volatile variable final because the volatile keyword is used with a variable that changes.

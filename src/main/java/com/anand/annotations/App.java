@@ -1,4 +1,4 @@
-package com.anand.versions;
+package com.anand.annotations;
 
 /**
  * Hello world!

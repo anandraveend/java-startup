@@ -33,7 +33,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<mainClass>com.anand.lambda.App</mainClass>					
+					<mainClass>com.anand.threads.philospher.PhilosophersCove</mainClass>					
 				</configuration>
 			</plugin>
 			<plugin>

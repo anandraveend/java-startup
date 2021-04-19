@@ -11,7 +11,8 @@ public class ObjectSerializationTest {
 
 	public static void main(String[] args) {
 		String cwd = System.getProperty("user.dir");
-		String filePath = cwd + File.pathSeparator + "target" + "ObjPickle.txt";
+		String filePath = cwd + File.separatorChar + "target" + File.separatorChar + "ObjPickle.txt";
+		
 		File fl = new File(filePath);
 		serializeTest(fl);
 		deSerializeTest(fl);

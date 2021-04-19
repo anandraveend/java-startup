@@ -1,13 +1,17 @@
-# Java 8 -ARCHIVE
+# Java 8 - NIO
 
-### Main Zip classes
-• ZipEntry
-• ZipInputStream
-• ZipOutputStream
-• ZipFile
+### New IO is an improvement on the speed of older java io package by leveraging streaming by using channels and streams
+A stream can be used for one-way data transfer. That is, an input stream can only transfer data from a data source to a Java program; an output stream can only transfer data from a Java program to a data sink. 
+However, a channel provides a two-way data transfer facility
 
-### The GZIPInputStream and GZIPOutputStream classes are used to work with the GZIP file format
+### Buffer classes
+A buffer is a fixed-length data container. There is a separate buffer type to hold data for each type of primitive value, except for boolean type values.
 
-###JAR - Java Archive
-JAR (Java Archive) is a file format based on the ZIP file format. It is used to bundle resources, class files,
-sound files, images, etc. for a Java application or applet
+The following are the four important properties of a buffer, which you must understand to use it
+effectively:
+• Capacity
+• Position
+• Limit
+• Mark
+
+A byte buffer gets special treatment in NIO. It has an extra method called allocateDirect() that creates a byte buffer for which the memory is allocated from the operating system memory, not from the JVM heap. This avoids copying the contents to intermediate buffers during I/O operations

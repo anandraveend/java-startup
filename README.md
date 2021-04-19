@@ -1,21 +1,13 @@
-# Java 8 -IO
+# Java 8 -ARCHIVE
 
-### Piped Streams are used to maintain a continuous flow of data from a source to a sink
--  PipedOutputStream
--  PipedInputStream
+### Main Zip classes
+• ZipEntry
+• ZipInputStream
+• ZipOutputStream
+• ZipFile
 
-### Decorator pattern 
+### The GZIPInputStream and GZIPOutputStream classes are used to work with the GZIP file format
 
-### Serialization is the process of converting java objects to a sequence of bytes and saving to a storage medium
-- implements Serializable
-- use an ObjectOutputStream
-- serialize using writeObject
-
-### Difference between Serializable vs Externalizable
-- S is just a marker. No methods defined in the interface while E requires you to implement readExternal and writeExternal
-- E makes it users responsibility to implement the serialization process
-- marking a field as static/transient skips them during the serialization process
-
-### RandomAccessFile allows both read and writes 
-
-### SerialTokenizer to split strings based on a combination of field separators 
+###JAR - Java Archive
+JAR (Java Archive) is a file format based on the ZIP file format. It is used to bundle resources, class files,
+sound files, images, etc. for a Java application or applet

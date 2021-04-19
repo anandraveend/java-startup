@@ -15,3 +15,10 @@ effectively:
 • Mark
 
 A byte buffer gets special treatment in NIO. It has an extra method called allocateDirect() that creates a byte buffer for which the memory is allocated from the operating system memory, not from the JVM heap. This avoids copying the contents to intermediate buffers during I/O operations
+
+### USe FileLock to get a exclusive lock on a file
+### User transferFrom/trasnsferTo to copy data from/to one channel to another
+
+### Use ByteOrder.nativeOrder() to get the ENDIAN-ness of machine
+
+### Use the Watchable interface to track modifications to a file object

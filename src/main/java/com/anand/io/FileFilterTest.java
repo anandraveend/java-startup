@@ -47,6 +47,17 @@ public class FileFilterTest {
 		return allFiles;
 	}
 	
+	public static List<File> findFileByPrefix(File dir,String prefix){
+		ArrayList<File> files = walkDir(dir);
+		List<File> foundFiles = files.stream().filter(p->{
+			String fName = p.getName().toLowerCase();
+			if(fName.endsWith(prefix))
+				return true;
+			return false;
+		}).collect(Collectors.toList());
+		return foundFiles;
+	}
+	
 	public static File[] merge(File[] a, File[] b){
 		if(a == null) {
 			return b;

@@ -32,9 +32,9 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
+				<!-- <configuration>
 					<mainClass>com.anand.threads.philospher.PhilosophersCove</mainClass>					
-				</configuration>
+				</configuration> -->
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

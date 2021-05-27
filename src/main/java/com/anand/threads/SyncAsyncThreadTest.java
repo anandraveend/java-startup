@@ -2,7 +2,7 @@ package com.anand.threads;
 
 import java.util.stream.IntStream;
 
-public class App {
+public class SyncAsyncThreadTest {
 
 	public static void main(String[] args) {
 		IntStream.range(1, 10).forEach(i->{

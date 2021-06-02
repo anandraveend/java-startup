@@ -1,4 +1,4 @@
-package com.anand.decorator;
+package com.anand.design.pattern.decorator;
 
 public abstract class DrinkDecorator extends Drink{
 	protected Drink drink;

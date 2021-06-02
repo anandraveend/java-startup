@@ -1,4 +1,4 @@
-package com.anand.decorator;
+package com.anand.design.pattern.decorator;
 
 public class Whiskey extends Drink{
 	public Whiskey() {

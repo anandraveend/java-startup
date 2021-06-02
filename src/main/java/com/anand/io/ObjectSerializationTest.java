@@ -6,7 +6,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.anand.decorator.*;
+import com.anand.design.pattern.decorator.*;
 public class ObjectSerializationTest {
 
 	public static void main(String[] args) {
